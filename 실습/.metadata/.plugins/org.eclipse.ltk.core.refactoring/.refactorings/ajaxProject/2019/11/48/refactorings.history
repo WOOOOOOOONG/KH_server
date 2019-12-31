@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ajaxProject/src/com/kh/test/a.java&apos; to &apos;JqAjaxServlet4.java&apos;" description="Rename resource &apos;a.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/com/kh/test/a.java" name="JqAjaxServlet4.java" stamp="1574681813392" updateReferences="true"/>
+</session>

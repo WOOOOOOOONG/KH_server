@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TestJspServlet/src/Member/controller/BoardInsert.java&apos; to &apos;BoardWriteServlet.java&apos;" description="Rename resource &apos;BoardInsert.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Member/controller/BoardInsert.java" name="BoardWriteServlet.java" stamp="1575010242178" updateReferences="true"/>
+</session>

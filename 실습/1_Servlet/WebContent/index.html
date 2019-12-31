@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+	- 환경 설정
+	1. 톰캣 설치(dev 폴더에 압축 풀기)
+	2. Server Runtime Environments에서 설치 경로 등록(이클립스에 서버 연동)
+	3. 필요한 환경 세팅(navigator, problems, servers, console)
+	4. 서버 등록(톰캣 기본 포트와 오라클 기본 포트가 동일하게 8080이므로 포트번호 변경, server publishing 체크)
+	5. java ee 환경으로 설정
+	6. 파일 바로가기 생성(옵션)
+	7. 인코딩 설정(영어, 숫자, 한글 등 모든 문자셋을 사용할 수 있도록)
+	- 활용
+	8. dynamic web project 만들기
+	 -output folder : 컴파일된 클래스 파일들이 들어갈 곳 지정
+	    변경하는 이유는 실제로 배포될 폴더 안에 해당 컴파일된 클래스 파일들이 있어야 하므로 배포될 폴더는 WebContent(WebContent->WEB-INF->classes)라서
+	 -context Root : 애플리케이션에 접근하는 경로로 사용될 별칭같은 것(애플리케이션을 구분하기 위한 용도)
+	 -context directory : contextRoot가 가리킬 폴더 즉, 배포되는 폴더의 최상위 폴더 지정
+	 -Generate ~ 무조건 체크! : 배포 서술자라고 해서 애플리케이션에 대한 전체 설정 정보를 가지고 있는 파일인 web.xml을 만들기 위함.
+ -->
+ <h1>어서와 Web은 처음이지 ?</h1>
+ <h2>Servlet</h2>
+ <p>
+ 	서블릿이란, 웹 서비스를 위한 "자바 클래스"를 말하며 자바를 사용해 웹을 만들기 위해 필요한 기술.<br>
+ 	-> 사용자의 요청을 받아 처리하고 그 결과를 다시 사용자에게 전송하는 역할의 class 파일<br>
+ 	-> 즉, 웹에서 동적인 페이지를 java로 구현한 서버 측 프로그램(톰캣 서버에서 구동)
+ 	javax.servlet.http.HttpServlet 클래스를 상속받는다.<br> 
+ </p>
+ 
+ <!-- /context Root/mapping 명칭 -->
+ <form action="/1_Servlet/test" method="get">
+ 	<button type="submit">요청</button> <!-- 404 error는 url이 맞지 않을 때 나타남 -->
+ </form>
+ 
+ <h3><a href="views/testServlet1.html">Servlet-GET방식</a></h3>
+ <h3><a href="views/testServlet2.html">Servlet-POST방식</a></h3>
+ <h3><a href="views/testServlet3.html">Servlet+JSP</a></h3>
+</body>
+</html>
