@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="java.util.Date, java.text.SimpleDateFormat" %>
-<%
+<%-- <%
 	Date date = new Date();
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 	String today = sdf.format(date);
-%>
+%> --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,12 +46,13 @@
 </style>
 </head>
 <body>
-	<%@ include file="../common/menubar.jsp" %>
+	<%-- <%@ include file="../common/menubar.jsp" %> --%>
+	<jsp:include page="../common/menubar.jsp"/>
 	<div class="outer">
 		<br>
 		<h2 align="center">공지사항 작성</h2>
 			<div class="tableArea">
-				<form action="<%= contextPath %>/insert.no" method="post">
+				<form action="${contextPath}/insert.no" method="post">
 					<table>
 						<tr>
 							<td>제목</td>
@@ -60,10 +61,10 @@
 						<tr>
 							<td>작성자</td>
 							<td>
-								<input type="text" value="<%= loginUser.getUserName() %>" name="writer" readonly>
+								<input type="text" value="<%-- <%= loginUser.getUserName() %> --%>${loginUser.userName}" name="writer" readonly>
 							</td>
 							<td>작성일</td>
-							<td><input type="date" name="date" value="<%= today %>"></td>
+							<td><input type="date" name="date" value="<%-- <%= today %> --%>${today}"></td>
 						</tr>
 						<tr>
 							<td>내용</td>

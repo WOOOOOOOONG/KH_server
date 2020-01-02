@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="member.model.vo.Member" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 	// 2_1_1. session 객체에 담겨진 loginUser 정보를 변수에 담는다
 	Member loginUser = (Member)session.getAttribute("loginUser");
@@ -87,6 +88,9 @@
 </style>
 </head>
 <body>
+	<!-- 모든 영역에서 사용할 수 있는 변수 c:set으로 선언 -->
+	<c:set var="contextPath" value="${ pageContext.servletContext.contextPath }" scope="application"/>
+
 	<h1 align="center">Welcome to JSP World!!</h1>
 	<div class="loginArea">
 	<!-- 2_1. 로그인이 안 되어있는 경우와 되어 있는 경우가 다르게 보여야 하므로 if문 추가 -->

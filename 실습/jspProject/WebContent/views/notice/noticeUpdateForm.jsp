@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="notice.model.vo.Notice" %>
-<%
+<%-- <%
 	Notice n = (Notice)request.getAttribute("notice");
-%>
+%> --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,32 +44,33 @@
 </style>
 </head>
 <body>
-	<%@ include file="../common/menubar.jsp" %>
+	<%-- <%@ include file="../common/menubar.jsp" %> --%>
+	<jsp:include page="../common/menubar.jsp"/>
 	<div class="outer">
 		<br>
 		
 		<h2 align="center">공지사항 수정하기</h2>
 		<div class="tableArea">
-			<form action="<%= contextPath %>/update.no" method="post">
-				<input type="hidden" value="<%= n.getnNo() %>" name="nno">
+			<form action="${contextPath}/update.no" method="post">
+				<input type="hidden" value="<%-- <%= n.getnNo() %> --%>${notice.nNo}" name="nno">
 				<table>
 				<tr>
 					<td>제목</td>
-					<td colspan="3"><input type="text" size="50" name="title" value="<%= n.getnTitle() %>"></td>
+					<td colspan="3"><input type="text" size="50" name="title" value="<%-- <%= n.getnTitle() %> --%>${notice.nTitle}"></td>
 				</tr>
 				<tr>
 					<td>작성자</td>
-					<td><input type="text" value="<%= n.getnWriter() %>"
+					<td><input type="text" value="<%-- <%= n.getnWriter() %> --%>${notice.nWriter}"
 						name="writer" readonly></td>
 					<td>작성일</td>
-					<td><input type="date" name="date" value="<%= n.getnDate() %>" readonly></td>
+					<td><input type="date" name="date" value="<%-- <%= n.getnDate() %> --%>${notice.nDate}" readonly></td>
 				</tr>
 				<tr>
 					<td>내용</td>
 				</tr>
 				<tr>
 					<td colspan="4"><textarea name="content" cols="60" rows="15"
-							style="resize: none;"><%= n.getnContent() %></textarea></td>
+							style="resize: none;"><%-- <%= n.getnContent() %> --%>${notice.nContent}</textarea></td>
 				</tr>
 			</table>
 			

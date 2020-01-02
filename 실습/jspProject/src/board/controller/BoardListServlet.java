@@ -94,7 +94,7 @@ public class BoardListServlet extends HttpServlet {
 		ArrayList<Board> list = bService.selectList(currentPage, boardLimit);
 		
 		System.out.println("list : " + list);
-		RequestDispatcher view = request.getRequestDispatcher("views/board/boardListView.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("views/board/boardListView2.jsp");
 		request.setAttribute("list", list);
 		request.setAttribute("pi", pi);
 		view.forward(request, response);
