@@ -37,7 +37,12 @@ public class Person {
 	public void setGender(char gender) {
 		this.gender = gender;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + ", gender=" + gender + "]";
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -68,11 +73,7 @@ public class Person {
 			return false;
 		return true;
 	}
-
-	@Override
-	public String toString() {
-		return "Person [name=" + name + ", age=" + age + ", gender=" + gender + "]";
-	}
-
 	
+	
+
 }

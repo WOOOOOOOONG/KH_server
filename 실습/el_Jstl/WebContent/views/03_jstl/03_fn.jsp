@@ -21,19 +21,18 @@
 	<c:set var="idx1" value="${ fn:indexOf(str, 'are') }"/>
 	<c:set var="idx2" value="${ fn:indexOf(str, 'you?') }"/>
 	idx1에서 idx2 전까지 : ${ fn:substring(str, idx1, idx2) } <br>
-	'are' 이전 : ${ fn:substringBefore(str, 'are') } <br>
 	'are' 이후 : ${ fn:substringAfter(str, 'are') } <br>
+	'are' 이전 : ${ fn:substringBefore(str, 'are') } <br>
 	
-	are -> were 변경 : ${ fn:replace(str, 'are', 'were') } <br> 
+	are -> were 변경 : ${ fn:replace(str, 'are', 'were') } <br>
 	replace 후 str : ${ str } <br>
-	<!-- replace는 원본값이 바뀌는 게 아니라, 일시적으로 바꾸는 것이다. -->
 	
 	<c:set var="arr" value="${ fn:split(str, ' ') }"/>
 	<c:forEach var="s" items="${ arr }">
 		split 결과 출력 : ${ s } <br>
 	</c:forEach>
 	
-	join 결과 출력 : ${ fn:join(arr, ' ') }<br>
+	join 결과 출력 : ${ fn:join(arr, ' ') } <br>
 	
 	<c:if test="${ fn:startsWith(str, 'H') }">
 		문자열이 H로 시작
@@ -47,5 +46,21 @@
 	<c:if test="${ fn:containsIgnoreCase(str, 'ARE') }">
 		문자열에 대소문자 무관하게 ARE 포함
 	</c:if><br>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
 </body>
 </html>

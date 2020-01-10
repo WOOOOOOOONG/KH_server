@@ -7,9 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	상품명: ${ param.pName } <br>
-	상품갯수: ${ param.pCount } <br>
+	상품명 : ${ param.pName } <br>
+	상품갯수 : ${ param.pCount } <br>
 	옵션1 : ${ paramValues.option[0] } <br>
-	옵션2 : ${ paramValues.option[1] } <br>
+	옵션2 : ${ paramValues.option[1] } 
+ 
 </body>
 </html>

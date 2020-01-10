@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<form action="02_elParamEnd.jsp">
 		<input type="text" name="pname" placeholder="제품명을 입력하세요">
 		<br>
@@ -16,7 +17,20 @@
 		<br>
 		<input type="text" name="option" placeholder="옵션2">
 		<br>
-		<input type="submit" value="제출">
+		<input type="submit" value="제출">	
 	</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

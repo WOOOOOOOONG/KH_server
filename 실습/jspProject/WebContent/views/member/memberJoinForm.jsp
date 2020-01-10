@@ -122,7 +122,7 @@
 			<br>
 			<div class="btns" align="center">
 				<button id="toMain" onclick="returnToMain()" type="button">메인으로</button>
-				<!-- 아이디 중복확인이 되었을 경우에만 '가입하기' 버튼 활성화 하기 -->
+				<!-- 아이디 중복 확인이 되었을 경우에만 '가입하기' 버튼 활성화 하기 -->
 				<!-- <button id="joinBtn">가입하기</button> -->
 				<button id="joinBtn" disabled>가입하기</button>
 			</div>
@@ -168,55 +168,55 @@
 			window.open("idCheckForm.jsp", "checkForm", "width=300, height=200");
 		}
 		
-		// ---------------------------------------------------------------------------
+		//---------------------------------------------------------------
 		// ajax를 이용한 id 중복 확인
-		$(function() {
-			var isUsable = false;
-			// 아이디 중복시 false, 아이디 사용 가능시 true -> 나중에 유효성 검사
+		$(function(){
 			
-			$("#idCheck").click(function() {
+			var isUsable = false;
+			// 아이디 중복 시 false, 아이디 사용 가능 시 true -> 나중에 유효성 검사
+			
+			$("#idCheck").click(function(){
 				var userId = $("#joinForm input[name='userId']");
 				
-				if(!userId || userId.val().length < 4) {
+				if(!userId || userId.val().length < 4){
 					alert("아이디는 최소 4자리 이상이어야 합니다.");
 					userId.focus();
-				}else {
-					// ajax로 중복여부 확인
+				}else{
+					// ajax로 중복 여부 확인
 					$.ajax({
 						url : "<%= request.getContextPath() %>/idCheck.me",
 						type : "post",
 						data : {userId:userId.val()},
-						success : function(data) {
-							if(data == "fail") { // script에서는 equals로 안쓰는듯
-								alert("사용할 수 없는 아이디입니다.");
+						success : function(data){
+							if(data == "fail"){
+								alert('사용할 수 없는 아이디입니다.');
 								userId.focus();
-							}else {
-								if(confirm("사용 가능한 아이디입니다. 사용하시겠습니까?")) {
-									userId.prop('readonly', true); // 더이상 userId에 값 입력해서 변경할 수 없도록
-									// prop : 속성 중 true/false 값을 갖고있는 속성
-									// css : 스타일
-									// attr : 속성
+							}else{
+								if(confirm("사용 가능한 아이디입니다. 사용하시겠습니까?")){
+									userId.prop('readonly', true); 
+									// -> 더 이상 userId에 값 입력해서 변경할 수 없도록
 									isUsable = true;
-									// -> 사용 가능하다는 flag값
-								}else {
+									// -> 사용 가능하다는 flag 값
+								}else{
 									userId.focus();
 								}
 							}
-							
-							if(isUsable) {
+						
+							if(isUsable){
 								// 아이디 중복 체크 후 사용 가능한 아이디이며 사용하기로 한 경우
 								// 회원가입 버튼 활성화
 								$("#joinBtn").removeAttr("disabled");
 							}
 						},
-						error : function() {
+						error : function(){
 							console.log('서버 통신 안됨');
 						}
 					});
 				}
+				
+				
 			});
 		});
-	
 	</script>
 	
 </body>

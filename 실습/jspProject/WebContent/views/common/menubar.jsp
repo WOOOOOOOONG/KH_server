@@ -89,7 +89,8 @@
 </head>
 <body>
 	<!-- 모든 영역에서 사용할 수 있는 변수 c:set으로 선언 -->
-	<c:set var="contextPath" value="${ pageContext.servletContext.contextPath }" scope="application"/>
+	<c:set var="contextPath" value="${ pageContext.servletContext.contextPath }" 
+	scope="application"/>
 
 	<h1 align="center">Welcome to JSP World!!</h1>
 	<div class="loginArea">

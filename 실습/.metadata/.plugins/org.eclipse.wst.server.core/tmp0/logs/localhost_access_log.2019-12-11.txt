@@ -1,0 +1,11 @@
+127.0.0.1 - - [11/Dec/2019:15:59:12 +0900] "GET / HTTP/1.1" 404 1115
+0:0:0:0:0:0:0:1 - - [11/Dec/2019:15:59:13 +0900] "GET /jsp/idCheck.me HTTP/1.1" 200 7
+0:0:0:0:0:0:0:1 - - [11/Dec/2019:15:59:27 +0900] "GET /jsp/index.jsp HTTP/1.1" 200 4197
+0:0:0:0:0:0:0:1 - - [11/Dec/2019:15:59:27 +0900] "GET /jsp/resources/images/city1.PNG HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [11/Dec/2019:15:59:34 +0900] "GET /jsp/views/member/memberJoinForm.jsp HTTP/1.1" 200 10299
+0:0:0:0:0:0:0:1 - - [11/Dec/2019:15:59:54 +0900] "GET /jsp/views/member/memberJoinForm.jsp HTTP/1.1" 200 10299
+0:0:0:0:0:0:0:1 - - [11/Dec/2019:15:59:54 +0900] "GET /jsp/resources/images/city1.PNG HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [11/Dec/2019:15:59:55 +0900] "GET /favicon.ico HTTP/1.1" 404 1126
+0:0:0:0:0:0:0:1 - - [11/Dec/2019:16:00:01 +0900] "POST /jsp/idCheck.me HTTP/1.1" 200 7
+0:0:0:0:0:0:0:1 - - [11/Dec/2019:16:30:40 +0900] "GET /jsp/views/member/memberJoinForm.jsp HTTP/1.1" 200 10299
+0:0:0:0:0:0:0:1 - - [11/Dec/2019:16:30:43 +0900] "POST /jsp/idCheck.me HTTP/1.1" 200 4

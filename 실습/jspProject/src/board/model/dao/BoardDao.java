@@ -423,21 +423,22 @@ public class BoardDao {
 
 		return at;
 	}
-
-	// 특정 게시글의 댓글 리스트 셀렉트하기
+	
+	// 특정 게시글의 댓글 리스트 셀렉하기
 	public ArrayList<Reply> selectReplyList(Connection conn, int bId) {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		ArrayList<Reply> rlist = null;
 		
 		String sql = prop.getProperty("selectReplyList");
+		
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, bId);
+			
 			rs = pstmt.executeQuery();
 			
 			rlist = new ArrayList<Reply>();
-			
 			
 			while(rs.next()) {
 				rlist.add(new Reply(rs.getInt("rid"),
@@ -449,36 +450,45 @@ public class BoardDao {
 									rs.getString("status")));
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			close(rs);
 			close(pstmt);
 		}
-		
 		return rlist;
 	}
 
 	// 댓글 입력
 	public int insertReply(Connection conn, Reply r) {
-		PreparedStatement pstmt  = null;
+		PreparedStatement pstmt = null;
+		
 		int result = 0;
+		
 		String sql = prop.getProperty("insertReply");
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
+			
 			pstmt.setString(1, r.getrContent());
 			pstmt.setInt(2, r.getRefBid());
 			pstmt.setInt(3, r.getrWriter());
 			
 			result = pstmt.executeUpdate();
+			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			close(pstmt);
 		}
-		
 		return result;
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

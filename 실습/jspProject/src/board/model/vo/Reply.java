@@ -1,6 +1,6 @@
 package board.model.vo;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Reply {
 	private int rId;
@@ -96,6 +96,5 @@ public class Reply {
 				+ ", userName=" + userName + ", createDate=" + createDate + ", modifyDate=" + modifyDate + ", status="
 				+ status + "]";
 	}
-	
-	
+
 }

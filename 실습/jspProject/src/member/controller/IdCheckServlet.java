@@ -43,25 +43,12 @@ public class IdCheckServlet extends HttpServlet {
 		view.forward(request, response);*/
 		
 		// 2. ajax를 이용한 중복체크
-		PrintWriter out = response.getWriter(); // 스트림 열어서 갖고옴
+		PrintWriter out = response.getWriter();
 		if(result > 0) {
 			out.print("fail");
 		}else {
 			out.print("success");
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 
 	/**

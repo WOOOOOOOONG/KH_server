@@ -194,7 +194,7 @@ public class BoardService {
 		close(conn);
 		return at;
 	}
-
+	
 	// 선택한 게시글의 댓글 리스트 조회용 서비스
 	public ArrayList<Reply> selectReplyList(int bId) {
 		Connection conn = getConnection();
@@ -206,7 +206,7 @@ public class BoardService {
 		return rlist;
 	}
 
-	// 댓글 추가 시 새로 갱신된 댓글 리스트 조회용 서비스
+	// 댓글 추가 시 새로 갱신 된 댓글 리스트 조회용 서비스
 	public ArrayList<Reply> insertReply(Reply r) {
 		Connection conn = getConnection();
 		
@@ -228,4 +228,12 @@ public class BoardService {
 		return rlist;
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
 }

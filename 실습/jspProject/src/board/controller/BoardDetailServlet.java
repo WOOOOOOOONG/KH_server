@@ -76,19 +76,19 @@ public class BoardDetailServlet extends HttpServlet {
 			
 		}
 		
-		// Ajax를 이용한 댓글 기능 구현
+		
+		// ajax를 이용한 댓글 기능 구현
 		ArrayList<Reply> rlist = new BoardService().selectReplyList(bId);
 		
 		if(board != null) {
-			// ajax 이후
-			request.setAttribute("rlist",rlist);
 			request.setAttribute("board", board);
+			// ajax 이후
+			request.setAttribute("rlist", rlist);
 			request.getRequestDispatcher("views/board/boardDetailView.jsp").forward(request, response);
 		}else {
 			request.setAttribute("msg", "게시판 상세조회에 실패하였습니다.");
 			request.getRequestDispatcher("views/common/errorPage.jsp").forward(request, response);
 		}
-		
 		
 	}
 	/**

@@ -12,7 +12,7 @@
 	
 	<h2>참고 : jsp:useBean 활용하기</h2>
 	
-	<!-- com.kh.model.vo.Person 클래스를 참조하여 page 범위에 m이라는 이름의 빈 객체 선언 -> Person m = new Person() -->
+	<!-- com.kh.model.vo.Person 클래스를 참조하여 page 범위에 m이라는 이름의 빈 객체 선언 -->
 	<jsp:useBean id="m" class="com.kh.model.vo.Person" scope="page"/>
 	
 	<!-- setter를 이용한 값 저장 -->
@@ -25,5 +25,6 @@
 	나이 : <jsp:getProperty property="age" name="m"/>
 	성별 : <jsp:getProperty property="gender" name="m"/>
 	
+
 </body>
 </html>
